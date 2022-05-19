@@ -4,8 +4,6 @@
 
 nvm list available
 
-![image-20220501225445699](C:\Users\liqian\AppData\Roaming\Typora\typora-user-images\image-20220501225445699.png)
-
 nvm install 14.18.0
 
 nvm use 14.18.0
