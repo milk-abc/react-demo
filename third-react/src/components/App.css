@@ -1,0 +1,9 @@
+.head {
+  width: 100%;
+  height: 20%;
+  background-color: grey;
+}
+.body {
+  width: 100%;
+  height: 80%;
+}
