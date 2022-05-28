@@ -35,28 +35,35 @@ export default class CommentAdd extends React.Component {
   render() {
     const { username, content } = this.state;
     return (
-      <div className="left">
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            用户名：
-            <input
-              type="text"
-              value={username}
-              onChange={this.handleNameChange}
-            ></input>
-          </label>
-          <label>
-            评论内容：
-            <textarea
-              value={content}
-              onChange={this.handleContentChange}
-            ></textarea>
-          </label>
-          <button type="submit" onClick={this.handleSubmit}>
-            提交
-          </button>
-        </form>
-      </div>
+      <form className="form-horizontal">
+        <div className="form-group">
+          <label>用户名：</label>
+          <input
+            type="text"
+            className="form-control"
+            placeholder="用户名"
+            value={username}
+            onChange={this.handleNameChange}
+          ></input>
+        </div>
+        <div className="form-group">
+          <label>评论内容：</label>
+          <textarea
+            className="form-control"
+            rows="6"
+            placeholder="评论内容"
+            value={content}
+            onChange={this.handleContentChange}
+          ></textarea>
+        </div>
+        <div className="form-group">
+          <div className="col-sm-offset-2 col-sm-10">
+            <button type="submit" onClick={this.handleSubmit}>
+              提交
+            </button>
+          </div>
+        </div>
+      </form>
     );
   }
 }

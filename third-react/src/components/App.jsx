@@ -26,12 +26,26 @@ export default class App extends React.Component {
     const { comments } = this.state;
     return (
       <div>
-        <div className="head">请发表对React的评论</div>
-        <CommentAdd addComment={this.addComment}></CommentAdd>
-        <CommentList
-          comments={comments}
-          deleteComment={this.deleteComment}
-        ></CommentList>
+        <header className="site-header jumbotron">
+          <div className="container">
+            <div className="row">
+              <div className="col-xs-12">
+                <h1>请发表对React的评论</h1>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div className="container">
+          <div className="col-md-4">
+            <CommentAdd addComment={this.addComment}></CommentAdd>
+          </div>
+          <div className="col-md-8">
+            <CommentList
+              comments={comments}
+              deleteComment={this.deleteComment}
+            ></CommentList>
+          </div>
+        </div>
       </div>
     );
   }
